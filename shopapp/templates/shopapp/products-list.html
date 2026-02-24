@@ -1,0 +1,42 @@
+{% extends "shopapp/base.html" %}
+{% load i18n %}
+
+{% block title %}  {%  trans "Products List" %} {% endblock %}
+ 
+{% block body %}
+    {% if products %}
+        <div>
+            {% blocktrans count products_count=products|length %}
+                There is only product.
+                {% plural %}
+                There are {{ products_count }}                
+            {% endblocktrans %}
+        </div>
+        <li>
+        {% for product in products %}
+            <div>
+                <p><a href="{% url "shopapp:product_details" pk=product.pk %}">
+                    {% trans "Name" %}: {{ product.name }}</a></p>
+                <p>{% trans "Price" %}: {{ product.price }}</p>
+                <p>
+                    {% trans "Discount" %}:
+                    {% if product.discount %}
+                        {{ product.discount }}
+                    {% else %}
+                        {% trans "no discount" %}
+                    {% endif %}
+                </p>
+                {% if product.preview %}
+                   <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}">
+                {% endif %}
+            </div>
+        {% endfor %}
+        </li>   
+    {% else %}
+        <h3>{% trans "No products yet" %}</h3>
+    {% endif %}
+    <div>
+        <a href="{% url 'shopapp:product_create' %}">
+            {% trans "Create a new product" %}</a>
+    </div>
+{% endblock %}

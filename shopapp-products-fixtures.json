@@ -1,0 +1,145 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Laptop",
+      "description": "some description this is not a Desktop",
+      "price": "1999.00",
+      "discount": 0,
+      "created_at": "2025-10-22T04:13:25.514Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Desktop",
+      "description": "",
+      "price": "2999.00",
+      "discount": 12,
+      "created_at": "2025-10-22T04:13:25.514Z",
+      "archived": false,
+      "preview": "products/product_5/preview/desktop-1.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Smartphone",
+      "description": "Experience lightning-fast performance, vibrant visuals, and long-lasting battery in a sleek smartphone. Capture stunning photos, stay connected all day, and enjoy seamless multitasking. Perfect for work and play—modern design, powerful features, and ultimate reliability.",
+      "price": "999.00",
+      "discount": 15,
+      "created_at": "2025-10-22T04:13:25.514Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Phone Samsung",
+      "description": "The is best smartphone",
+      "price": "1995.55",
+      "discount": 10,
+      "created_at": "2025-12-24T11:22:08.198Z",
+      "archived": false,
+      "preview": "products/product_8/preview/smartphone-1.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "Huaway Table",
+      "description": "It is good table",
+      "price": "2100.00",
+      "discount": 5,
+      "created_at": "2025-12-24T11:23:35.096Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+      "name": "Notebook",
+      "description": "Think is device",
+      "price": "2829.00",
+      "discount": 5,
+      "created_at": "2026-01-12T07:47:35.467Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 11,
+    "fields": {
+      "name": "IPhome 17",
+      "description": "",
+      "price": "3199.00",
+      "discount": 10,
+      "created_at": "2026-01-12T09:34:57.588Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 13,
+    "fields": {
+      "name": "HeadPhone",
+      "description": "This is nice headphone (too old)",
+      "price": "199.00",
+      "discount": 10,
+      "created_at": "2026-01-20T11:35:41.279Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 14,
+    "fields": {
+      "name": "Smartphone_1",
+      "description": "",
+      "price": "199.99",
+      "discount": 15,
+      "created_at": "2026-01-26T12:15:45.290Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 15,
+    "fields": {
+      "name": "Smartphone_2",
+      "description": "",
+      "price": "299.99",
+      "discount": 15,
+      "created_at": "2026-01-26T12:15:45.291Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 16,
+    "fields": {
+      "name": "Smartphone_3",
+      "description": "",
+      "price": "399.99",
+      "discount": 15,
+      "created_at": "2026-01-26T12:15:45.291Z",
+      "archived": false,
+      "preview": ""
+    }
+  }
+]

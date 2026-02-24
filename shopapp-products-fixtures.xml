@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="shopapp.product" pk="4">
+        <field name="name" type="CharField">Laptop</field>
+        <field name="description" type="TextField">some description this is not a Desktop</field>
+        <field name="price" type="DecimalField">1999.00</field>
+        <field name="discount" type="IntegerField">0</field>
+        <field name="created_at" type="DateTimeField">2025-10-22T04:13:25.514158+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="5">
+        <field name="name" type="CharField">Desktop</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">2999.00</field>
+        <field name="discount" type="IntegerField">12</field>
+        <field name="created_at" type="DateTimeField">2025-10-22T04:13:25.514158+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_5/preview/desktop-1.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="6">
+        <field name="name" type="CharField">Smartphone</field>
+        <field name="description" type="TextField">Experience lightning-fast performance, vibrant visuals, and
+            long-lasting battery in a sleek smartphone. Capture stunning photos, stay connected all day, and enjoy
+            seamless multitasking. Perfect for work and play—modern design, powerful features, and ultimate reliability.
+        </field>
+        <field name="price" type="DecimalField">999.00</field>
+        <field name="discount" type="IntegerField">15</field>
+        <field name="created_at" type="DateTimeField">2025-10-22T04:13:25.514158+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="8">
+        <field name="name" type="CharField">Phone Samsung</field>
+        <field name="description" type="TextField">The is best smartphone</field>
+        <field name="price" type="DecimalField">1995.55</field>
+        <field name="discount" type="IntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2025-12-24T11:22:08.198946+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_8/preview/smartphone-1.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="9">
+        <field name="name" type="CharField">Huaway Table</field>
+        <field name="description" type="TextField">It is good table</field>
+        <field name="price" type="DecimalField">2100.00</field>
+        <field name="discount" type="IntegerField">5</field>
+        <field name="created_at" type="DateTimeField">2025-12-24T11:23:35.096685+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="10">
+        <field name="name" type="CharField">Notebook</field>
+        <field name="description" type="TextField">Think is device</field>
+        <field name="price" type="DecimalField">2829.00</field>
+        <field name="discount" type="IntegerField">5</field>
+        <field name="created_at" type="DateTimeField">2026-01-12T07:47:35.467213+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="11">
+        <field name="name" type="CharField">IPhome 17</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">3199.00</field>
+        <field name="discount" type="IntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-01-12T09:34:57.588216+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="13">
+        <field name="name" type="CharField">HeadPhone</field>
+        <field name="description" type="TextField">This is nice headphone (too old)</field>
+        <field name="price" type="DecimalField">199.00</field>
+        <field name="discount" type="IntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-01-20T11:35:41.279523+00:00</field>
+        <field name="archived" type="BooleanField">True</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="14">
+        <field name="name" type="CharField">Smartphone_1</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">199.99</field>
+        <field name="discount" type="IntegerField">15</field>
+        <field name="created_at" type="DateTimeField">2026-01-26T12:15:45.290974+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="15">
+        <field name="name" type="CharField">Smartphone_2</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">299.99</field>
+        <field name="discount" type="IntegerField">15</field>
+        <field name="created_at" type="DateTimeField">2026-01-26T12:15:45.291485+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="16">
+        <field name="name" type="CharField">Smartphone_3</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">399.99</field>
+        <field name="discount" type="IntegerField">15</field>
+        <field name="created_at" type="DateTimeField">2026-01-26T12:15:45.291555+00:00</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+</django-objects>

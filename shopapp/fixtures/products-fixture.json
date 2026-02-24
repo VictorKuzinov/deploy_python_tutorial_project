@@ -1,0 +1,62 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Laptop",
+      "description": "",
+      "price": "1999.00",
+      "discount": 0,
+      "created_at": "2025-10-22T04:13:25.514Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Desktop",
+      "description": "",
+      "price": "2999.00",
+      "discount": 12,
+      "created_at": "2025-10-22T04:13:25.514Z",
+      "archived": true
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Smartphone",
+      "description": "Experience lightning-fast performance, vibrant visuals, and long-lasting battery in a sleek smartphone. Capture stunning photos, stay connected all day, and enjoy seamless multitasking. Perfect for work and play—modern design, powerful features, and ultimate reliability.",
+      "price": "999.00",
+      "discount": 25,
+      "created_at": "2025-10-22T04:13:25.514Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Phone Samsung",
+      "description": "The is best smartphone",
+      "price": "1995.55",
+      "discount": 10,
+      "created_at": "2025-12-24T11:22:08.198Z",
+      "archived": false
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "Huaway Table",
+      "description": "It is good table",
+      "price": "2100.00",
+      "discount": 5,
+      "created_at": "2025-12-24T11:23:35.096Z",
+      "archived": false
+    }
+  }
+]

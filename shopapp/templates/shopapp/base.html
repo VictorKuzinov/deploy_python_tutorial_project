@@ -1,0 +1,28 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+{% get_available_languages as LANGUAGES %}
+{% with tail=request.path|slice:"3:" %}
+  <div>
+    {% for code, name in LANGUAGES %}
+      <a href="/{{ code }}{{ tail }}">{{ name }}</a>
+      {% if not forloop.last %} | {% endif %}
+    {% endfor %}
+  </div>
+{% endwith %}
+
+<hr>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

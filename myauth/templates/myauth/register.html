@@ -1,0 +1,12 @@
+{% extends "myauth/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Register" %}{% endblock %}
+{% block body %}
+    <h1>{% trans "Register" %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="{% trans 'Register' %}">
+    </form>
+{% endblock %}

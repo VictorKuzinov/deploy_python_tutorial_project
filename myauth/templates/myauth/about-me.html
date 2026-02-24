@@ -1,0 +1,19 @@
+{% extends "myauth/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "About me" %}{% endblock %}
+
+{% block body %}
+<h1>{% trans "User info" %}</h1>
+
+{% if user.is_authenticated %}
+  <h2>{% trans "Detail" %}</h2>
+
+  <p>{% trans "Username" %}: {{ user.username }}</p>
+  <p>{% trans "First name" %}: {{ user.first_name }}</p>
+  <p>{% trans "Last name" %}: {{ user.last_name }}</p>
+  <p>{% trans "Email" %}: {{ user.email }}</p>
+{% else %}
+  <h2>{% trans "User is anonymous" %}</h2>
+{% endif %}
+{% endblock %}

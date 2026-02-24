@@ -1,0 +1,3 @@
+2026-02-05 07:19:44,506 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-02-05 07:21:50,105 [INFO] django.utils.autoreload: /mnt/c/PyProject/mysite/mysite/shopapp/views.py changed, reloading.
+2026-02-05 07:22:44,817 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

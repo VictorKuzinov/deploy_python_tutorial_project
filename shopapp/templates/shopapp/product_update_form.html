@@ -1,0 +1,28 @@
+{% extends "shopapp/base.html" %}
+
+{% block title %}Update product{% endblock %}
+ 
+{% block body %}
+    <h1>Update product</h1>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>
+                <label for="id_images">Additional images</label><br>
+                <input
+                    type="file"
+                    name="images"
+                    id="id_images"
+                    multiple
+                    accept="image/*"
+                >
+            </p>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+    <div>
+        <a href="{% url 'shopapp:product_details' pk=product.pk %}">
+        Back to products #{{ product.pk }}</a>
+    </div>
+{% endblock %}

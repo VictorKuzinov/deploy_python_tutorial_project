@@ -11,28 +11,38 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from os import getenv
 
+import logging.config
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 import sentry_sdk
+from sentry_sdk.utils import disable_capture_event
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+DATABASES_DIR = BASE_DIR / "database"
+DATABASES_DIR.mkdir(exist_ok=True)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k0$=s9@rofmj$ux238a@t7boxb6pk3pd2tb!hl@cwvv2wylzpe"
+SECRET_KEY = getenv("DJANGO_SECRET_KEY","django-insecure-k0$=s9@rofmj$ux238a@t7boxb6pk3pd2tb!hl@cwvv2wylzpe")
 sentry_sdk.init(
     dsn="https://30c83c88a6b6a61e14b3b4702dfdac63@o4510798593064960.ingest.de.sentry.io/4510798597259344",
     traces_sample_rate=1.0
 )
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv("DJANGO_DEBUG", "0") == "1"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "0.0.0.0",
+    "localhost",
+] + list(filter(None, getenv("DJANGO_ALLOWED_HOSTS", "").split(",")))
+
 INTERNAL_IPS = ["0.0.0.0",]
 
 
@@ -62,11 +72,11 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -103,7 +113,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": DATABASES_DIR / "db.sqlite3",
     },
 }
 
@@ -160,6 +170,8 @@ LANGUAGES = [
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "uploads"
 
@@ -189,6 +201,7 @@ SPECTACULAR_SETTINGS = {
 LOGFILE_NAME = BASE_DIR / "log.txt"
 LOGFILE_SIZE = 400
 LOGFILE_COUNT = 3
+LOGLEVEL = getenv("DJANGO_LOGLEVEL", "info").upper()
 
 LOGGING = {
     "version": 1,
@@ -217,7 +230,7 @@ LOGGING = {
             "console",
             "logfile"
         ],
-        "level": "INFO",
+        "level": LOGLEVEL,
     },
 }
 
@@ -239,3 +252,26 @@ DEBUG_TOOLBAR_CONFIG = {
         and not request.path.startswith("/static/")
     ),
 }
+
+# LOGLEVEL = getenv("DJANGO_LOGLEVEL", "info").upper()
+# logging.config.dictConfig({
+#     "version": 1,
+#     "disable_capture_event": False,
+#     "formaters": {
+#         "console": {
+#             "format": "%(asctime)s %(levelname)s [%(name)s: %(lineno)s] %(module)s %(message)s"
+#         },
+#     },
+#     "handlers":{
+#         "console": {
+#             "class": "logging.StreamHandler",
+#             "formatter": "console",
+#         },
+#     },
+#     "loggers": {
+#         "": {
+#             "level": LOGLEVEL,
+#             "handlers": ["console",],
+#         },
+#     },
+# })

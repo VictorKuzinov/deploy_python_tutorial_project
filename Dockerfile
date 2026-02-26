@@ -1,13 +1,17 @@
-FROM python:3.13
+FROM python:3.12-slim
 
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED=1 \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_NO_INTERACTION=1 \
+    PYTHONDONTWRITEBYTECODE=1
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+RUN pip install --upgrade pip "poetry==2.3.2"
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+COPY pyproject.toml poetry.lock* ./
+
+RUN poetry install --no-root --without dev
 
 COPY . .
 
